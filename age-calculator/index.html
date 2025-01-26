@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style/general-style.css">
+  <link rel="stylesheet" href="style/main-style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+
+<body class="body">
+  <main class="main-container">
+    <section class="information-container">
+      <div class="information-container__item">
+        <label for="put-day" class="label-date-input">D A Y</label>
+        <input type="number" name="put-day" id="put-day" placeholder="DD" class="input-date">
+        <p class="date-false date-dafault" id="day-error"></p>
+      </div>
+      <div class="information-container__item">
+        <label for="put-month" class="label-date-input">M O N T H</label>
+        <input type="number" name="put-month" id="put-month" placeholder="MM" class="input-date">
+        <p class="date-false date-dafault" id="month-error"></p>
+      </div>
+      <div class="information-container__item">
+        <label for="put-year" class="label-date-input">Y E A R</label>
+        <input type="number" name="put-year" id="put-year" placeholder="YYYY" class="input-date">
+        <p class="date-false date-dafault" id="year-error"></p>
+      </div>
+    </section>
+    <div class="divisor-sections">
+      <div class="line-divider"></div>
+      <img src="assets/images/icon-arrow.svg" alt="Icon Row Result" class="image-arrow">
+    </div>
+    <section class="age-container">
+      <p><span id="years-date-result">--</span>years</p>
+      <p><span id="months-date-result">--</span>months</p>
+      <p><span id="days-date-result">--</span>days</p>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
