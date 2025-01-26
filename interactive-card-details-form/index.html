@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Christopher Chacon">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="style/reset-styles.css">
+  <link rel="stylesheet" href="style/main.css">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body class="body">
+  <section class="section-card">
+    <div class="section-card__background" id="image-change">
+    </div>
+    <div class="card-back__container">
+      <div class="cvc-back__container">
+        <p class="cvc-back" id="cvc-back">000</p>
+      </div>
+      <img src="images/bg-card-back.png" alt="card back" class="card-back">
+    </div>
+    <div class="card-front__container">
+      <div class="card-front__container__information_card">
+        <div class="burbles">
+          <div class="bubble-fill"></div>
+          <div class="bubble-not-fill"></div>
+        </div>
+        <section class="card-front__container__information_card__content-info">
+          <p class="card-number-content" id="card-number-content">0000 0000 0000 0000</p>
+          <footer class="card-front__container__information_card__content-info__footer">
+            <p id="name-target-front">Card Name</p>
+            <p><span id="exp-date-front">00</span>/<span id="mm-yy">00</span></p>
+          </footer>
+        </section>
+      </div>
+      <img src="images/bg-card-front.png" alt="card front" class="card-front">
+    </div>
+  </section>
+
+  <form class="main-form" autocomplete="off" id="main-form">
+    <section class="maxWith">
+      <div class="main-form__input-container" id="name-card">
+        <label for="cardholder-name">cardholder name</label>
+        <div id="cardholder-name-border">
+          <input type="text" id="cardholder-name" placeholder="e.g Jane Appleseed" maxlength="15">
+        </div>
+      </div>
+      <div class="main-form__input-container" id="numbers-card">
+        <label for="card-number">card number</label>
+        <div id="card-number-border">
+          <input type="number" id="card-number" placeholder="e.g 1234 5678 9123 000" maxlength="16">
+        </div>
+      </div>
+      <div class="main-form__input-container-flex">
+        <div class="date-container">
+          <div id="exp-card" class="relative-container">
+            <label for="exp-date">exp. date</label>
+            <div id="card-exp-date">
+              <input type="number" id="exp-date" placeholder="MM">
+            </div>
+          </div>
+          <div id="date-card" class="relative-container">
+            <label for="date">(MM/YY)</label>
+            <div id="card-date">
+              <input type="number" id="date" placeholder="YY">
+            </div>
+          </div>
+        </div>
+        <div class="relative-container cvc-container" id="cvc-card">
+          <label for="cvc">cvc</label>
+          <div id="cvc-border">
+            <input type="number" id="cvc" placeholder="e.g. 123">
+          </div>
+        </div>
+      </div>
+      <button>Confirm</button>
+    </section>
+  </form>
+  <script src="js/main.js"></script>
+  <script src="js/change-image.js"></script>
+</body>
+
+</html>

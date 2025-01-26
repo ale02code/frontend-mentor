@@ -1,0 +1,406 @@
+:root {
+  --white: #ffffff;
+
+  /* Theme 1 */
+  --very-dark-desaturated-blue-main: #3a4764;
+  --very-dark-desatutated-blue-toggle: #232c43;
+  --very-dark-desaturated-blue-background: #182034;
+
+  /* keys */
+  --desaturated-dark-blue-key-background: #637097;
+  --desaturated-dark-blue-key-shadow: rgb(64, 78, 114);
+  --red-background: #d03f2f;
+  --dark-red-key-shadow: #93261a;
+  --light-grayish-orange: #eae3dc;
+  --grayish-orange-key-shadow: #b4a597;
+
+  /* text */
+  --very-dark-grayish-blue: #444b5a;
+
+  /* Theme 2 */
+  --light-gray-main-background: #e6e6e6;
+  --grayish-toggle-keypad: #d1cccc;
+  --very-light-gray-screen: #ededed;
+
+  /* keys */
+  --dark-moderate-cyan-key-background: #377f86;
+  --dark-moderate-cyan-key-shadow: #1b5f65;
+  --orange-key-background: #ca5502;
+  --orange-key-shadow: #893901;
+  --light-grayish-yellow-key-background: #e5e4e1;
+  --grayish-orange-key-shadow: #a69d91;
+
+  /* text */
+  --very-dark-grayish-yellow: #35352c;
+
+  /* Theme 3 */
+  --very-dark-violet-main-background: #160628;
+  --very-dark-violet-toggle-keypad: #1d0934;
+
+  /* keys */
+  --dark-violet-key-background: #58077d;
+  --vivid-magenta-key-shadow: #bc15f4;
+  --pure-cyan-key-background: #00e0d1;
+  --soft-cyan-key-shadow: #00b8a9;
+  --very-dark-violet-key-background: #341c4f;
+  --dark-magenta: #871c9c;
+
+  /* text */
+  --light-yellow: hsl(52, 100%, 62%);
+  --very-dark-blue: hsl(198, 20%, 13%);
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-container__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.main-container__header__theme-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 30px;
+  position: relative;
+}
+
+.main-container__header__theme-container-numbers-colors {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  width: 85px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.main-container__header__theme-container-numbers-colors p {
+  font-size: 16px;
+}
+
+.main-container__header__theme-container>label {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.main-container__header__theme-container__change-input {
+  width: 85px;
+  padding-top: 30px;
+  appearance: none;
+  background: transparent;
+}
+
+.main-container__result-section {
+  width: 100%;
+  text-align: right;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.main-container__result-section p {
+  font-size: 46px;
+}
+
+.main-container__keys {
+  width: 100%;
+  height: 65%;
+  padding: 1rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  place-content: center;
+  place-items: center;
+  border-radius: 8px;
+  gap: 8px;
+}
+
+.main-container__keys__button-container {
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  font-weight: bolder;
+  padding-bottom: 5px;
+  max-height: 85px;
+  max-width: 85px;
+}
+
+.main-container__keys__button-container-reset {
+  grid-column: span 2;
+  max-width: none;
+  max-height: none;
+}
+
+.main-container__keys__button-container-equal {
+  grid-column: span 2;
+  max-width: none;
+  max-height: none;
+}
+
+.main-container__keys__button-container__normal-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.main-container__keys__button-container__normal-button-delete {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.main-container__keys__button-container__reset-button {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.main-container__keys__button-container__equal-button {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* theme 1 */
+
+.body-1 {
+  background-color: var(--desaturated-dark-blue-key-background);
+  color: var(--white);
+}
+
+.input-theme-1::-webkit-slider-runnable-track {
+  appearance: none;
+  background-color: var(--very-dark-desatutated-blue-toggle);
+  padding: 5px 5px;
+  border-radius: 30px;
+  cursor: grab;
+}
+
+.input-theme-1::-webkit-slider-thumb {
+  appearance: none;
+  background-color: var(--red-background);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.result-1 {
+  background-color: var(--very-dark-desaturated-blue-background);
+}
+
+.keys-1 {
+  background-color: var(--very-dark-desatutated-blue-toggle);
+}
+
+.theme-1 {
+  background-color: var(--grayish-orange-key-shadow);
+}
+
+.button-normal-theme-1 {
+  background-color: var(--light-grayish-orange);
+  color: var(--very-dark-desaturated-blue-main);
+}
+
+.theme-delete-1 {
+  background-color: var(--very-dark-desaturated-blue-main);
+}
+
+.delete-1 {
+  background-color: var(--desaturated-dark-blue-key-background);
+  color: var(--white);
+}
+
+.theme-reset-1 {
+  background-color: var(--very-dark-desaturated-blue-main);
+}
+
+.reset-1 {
+  background-color: var(--desaturated-dark-blue-key-background);
+  color: var(--white);
+}
+
+.theme-equal-1 {
+  background-color: var(--dark-red-key-shadow);
+}
+
+.equal-1 {
+  background-color: var(--red-background);
+  color: var(--white);
+}
+
+/* theme 2 */
+
+.body-2 {
+  background-color: var(--light-gray-main-background);
+  color: var(--very-dark-grayish-yellow);
+}
+
+.input-theme-2::-webkit-slider-runnable-track {
+  appearance: none;
+  background-color: var(--grayish-toggle-keypad);
+  padding: 5px 5px;
+  border-radius: 30px;
+  cursor: grab;
+}
+
+.input-theme-2::-webkit-slider-thumb {
+  appearance: none;
+  background-color: var(--orange-key-background);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.result-2 {
+  background-color: var(--very-light-gray-screen);
+}
+
+.keys-2 {
+  background-color: var(--grayish-toggle-keypad);
+}
+
+.theme-2 {
+  background-color: var(--grayish-orange-key-shadow);
+}
+
+.button-normal-theme-2 {
+  background-color: var(--light-grayish-yellow-key-background);
+  color: var(--very-dark-grayish-blue);
+}
+
+.theme-delete-2 {
+  background-color: var(--dark-moderate-cyan-key-shadow);
+}
+
+.delete-2 {
+  background-color: var(--dark-moderate-cyan-key-background);
+  color: var(--white);
+}
+
+.theme-reset-2 {
+  background-color: var(--dark-moderate-cyan-key-shadow);
+}
+
+.reset-2 {
+  background-color: var(--dark-moderate-cyan-key-background);
+  color: var(--white);
+}
+
+.theme-equal-2 {
+  background-color: var(--orange-key-shadow);
+}
+
+.equal-2 {
+  background-color: var(--orange-key-background);
+  color: var(--very-light-gray-screen);
+}
+
+/* theme 3 */
+.body-3 {
+  background-color: var(--very-dark-violet-main-background);
+  color: var(--light-yellow);
+}
+
+.input-theme-3::-webkit-slider-runnable-track {
+  appearance: none;
+  background-color: var(--very-dark-violet-toggle-keypad);
+  padding: 5px 5px;
+  border-radius: 30px;
+  cursor: grab;
+}
+
+.input-theme-3::-webkit-slider-thumb {
+  appearance: none;
+  background-color: var(--pure-cyan-key-background);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.result-3 {
+  background-color: var(--very-dark-violet-toggle-keypad);
+}
+
+.keys-3 {
+  background-color: var(--very-dark-violet-toggle-keypad);
+}
+
+.theme-3 {
+  background-color: var(--dark-violet-key-background);
+}
+
+.button-normal-theme-3 {
+  background-color: var(--very-dark-violet-key-background);
+  color: var(--light-yellow);
+}
+
+.theme-delete-3 {
+  background-color: var(--vivid-magenta-key-shadow);
+}
+
+.delete-3 {
+  background-color: var(--dark-violet-key-background);
+  color: var(--white);
+}
+
+.theme-reset-3 {
+  background-color: var(--vivid-magenta-key-shadow);
+}
+
+.reset-3 {
+  background-color: var(--dark-violet-key-background);
+  color: var(--white);
+}
+
+.theme-equal-3 {
+  background-color: var(--pure-cyan-key-background);
+}
+
+.equal-3 {
+  background-color: var(--soft-cyan-key-shadow);
+  color: var(--very-light-gray-screen);
+}
+
+@media screen and (min-width: 500px) {
+  .main-container {
+    max-width: 500px;
+  }
+}

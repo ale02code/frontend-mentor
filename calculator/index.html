@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/reset-style.css">
+  <link rel="stylesheet" href="css/main-style.css">
+  <title>Calculator app</title>
+</head>
+
+<body class="body">
+  <main class="main-container">
+    <header class="main-container__header">
+      <h2 class="main-container__header__title">calc</h2>
+      <div class="main-container__header__theme-container">
+        <label for="change-theme">Theme</label>
+        <section class="main-container__header__theme-container-numbers-colors">
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+        </section>
+        <input type="range" name="change-theme" id="change-theme" max="2" value="0"
+          class="main-container__header__theme-container__change-input">
+      </div>
+    </header>
+    <section class="main-container__result-section">
+      <p id="result-view">0</p>
+    </section>
+    <section class="main-container__keys">
+      <div class="main-container__keys__button-container">
+        <button class="main-container__keys__button-container__normal-button numbers">7</button>
+      </div>
+      <div class="main-container__keys__button-container">
+        <button class="main-container__keys__button-container__normal-button numbers">8</button>
+      </div>
+      <div class="main-container__keys__button-container">
+        <button class="main-container__keys__button-container__normal-button numbers">9</button>
+      </div>
+      <div class="main-container__keys__button-container" id="remove-container">
+        <button class="main-container__keys__button-container__normal-button
+        main-container__keys__button-container__normal-button-delete" id="remove-button">DEL</button>
+      </div>
+      <div class="main-container__keys__button-container">
+        <button class="main-container__keys__button-container__normal-button numbers">4</button>
+      </div>
+      <div class="main-container__keys__button-container">
+        <button class="main-container__keys__button-container__normal-button numbers">5</button>
+      </div>
+      <div class="main-container__keys__button-container">
+        <button class="main-container__keys__button-container__normal-button numbers">6</button>
+      </div>
+      <div class="main-container__keys__button-container">
+        <button class="main-container__keys__button-container__normal-button symbols">+</button>
+      </div>
+      <div class="main-container__keys__button-container">
+        <button class="main-container__keys__button-container__normal-button numbers">1</button>
+      </div>
+      <div class="main-container__keys__button-container">
+        <button class="main-container__keys__button-container__normal-button numbers">2</button>
+      </div>
+      <div class="main-container__keys__button-container">
+        <button class="main-container__keys__button-container__normal-button numbers">3</button>
+      </div>
+      <div class="main-container__keys__button-container">
+        <button class="main-container__keys__button-container__normal-button symbols">-</button>
+      </div>
+      <div class="main-container__keys__button-container">
+        <button class="main-container__keys__button-container__normal-button numbers">.</button>
+      </div>
+      <div class="main-container__keys__button-container">
+        <button class="main-container__keys__button-container__normal-button numbers">0</button>
+      </div>
+      <div class="main-container__keys__button-container">
+        <button class="main-container__keys__button-container__normal-button symbols">/</button>
+      </div>
+      <div class="main-container__keys__button-container">
+        <button class="main-container__keys__button-container__normal-button symbols">x</button>
+      </div>
+      <div class="main-container__keys__button-container main-container__keys__button-container-reset">
+        <button class="main-container__keys__button-container__reset-button" id="reset-button">RESET</button>
+      </div>
+      <div class="main-container__keys__button-container main-container__keys__button-container-equal">
+        <button class="main-container__keys__button-container__equal-button" id="equal-button">=</button>
+      </div>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+  <script src="js/themes.js"></script>
+</body>
+
+</html>
